@@ -70,6 +70,12 @@ Route::delete('product-variant-item/{variantItemId}', [ProductVariantItemControl
 
 Route::put('product-variant-item-status', [ProductVariantItemController::class, 'chageStatus'])->name('product-variant-item.chages-status');
 
-// Seller Products Routes
 
+/** reviews routes */
+// Route::get('reviews', [AdminReviewController::class, 'index'])->name('reviews.index');
+// Route::put('reviews/change-status', [AdminReviewController::class, 'changeStatus'])->name('reviews.change-status');
+
+/** Seller product routes */
 Route::get('seller-product', [SellerProductController::class, 'index'])->name('seller-product.index');
+Route::get('seller-pending-product', [SellerProductController::class, 'pendingProducts'])->name('seller-pending-product.index');
+Route::put('change-approve-status', [SellerProductController::class, 'changeApproveStatus'])->name('change-approve-status');
