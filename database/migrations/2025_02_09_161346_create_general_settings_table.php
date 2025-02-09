@@ -21,7 +21,7 @@ return new class extends Migration
             $table->text('map')->nullable();
             $table->string('currency_name');
             $table->string('currency_icon');
-            $table->string('time_zone');
+            $table->string('time_zone')->nullable();
             $table->timestamps();
         });
     }
