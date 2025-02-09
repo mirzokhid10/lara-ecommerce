@@ -12,13 +12,14 @@ class SettingController extends Controller
 
     use ImageUploadTrait;
 
-    public function index(Request $request)
+    public function index()
     {
-        // $generalSettings = GeneralSetting::first();
+        $generalSettings = GeneralSetting::first();
         // $emailSettings = EmailConfiguration::first();
         // $logoSetting = LogoSetting::first();
         // $pusherSetting = PusherSetting::first();
-        return view('admin.setting.index', compact('generalSettings', 'emailSettings', 'logoSetting', 'pusherSetting'));
+        // , 'emailSettings', 'logoSetting', 'pusherSetting'
+        return view('admin.settings.index', compact('generalSettings'));
     }
 
     public function generalSettingUpdate(Request $request)
