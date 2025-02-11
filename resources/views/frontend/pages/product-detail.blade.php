@@ -1,8 +1,8 @@
 @extends('frontend.layouts.master')
 
-{{-- @section('title')
+@section('title')
     {{ $settings->site_name }} || Product Details
-@endsection --}}
+@endsection
 
 {{-- @section('metas')
     <meta property="og:title" content="{{ $product->name }}" />
@@ -13,8 +13,8 @@
 
 @section('content')
     <!--============================
-                    BREADCRUMB START
-                ==============================-->
+                                        BREADCRUMB START
+                                    ==============================-->
     <section id="wsus__breadcrumb">
         <div class="wsus_breadcrumb_overlay">
             <div class="container">
@@ -32,13 +32,13 @@
         </div>
     </section>
     <!--============================
-                    BREADCRUMB END
-                ==============================-->
+                                        BREADCRUMB END
+                                    ==============================-->
 
 
     <!--============================
-                    PRODUCT DETAILS START
-                ==============================-->
+                                        PRODUCT DETAILS START
+                                    ==============================-->
     <section id="wsus__product_details">
         <div class="container">
             <div class="wsus__details_bg">
@@ -145,12 +145,11 @@
                                         border-radius: 100%;"
                                             href="javascript:;" class="add_to_wishlist" data-id="{{ $product->id }}"><i
                                                 class="fal fa-heart"></i></a></li>
-                                    <li>
-                                        <button type="button"
+                                    <li><button type="button"
                                             style="border: 1px solid gray;
-                                        padding: 7px 11px;
-                                        margin-left: 7px;
-                                        border-radius: 100%; background-color: #0088cc"
+                                            padding: 7px 11px;
+                                            margin-left: 7px;
+                                            border-radius: 100%; background-color: #0088cc"
                                             class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                             <i class="far fa-comment-alt text-light"></i>
                                         </button>
@@ -359,8 +358,8 @@
         </div>
     </section>
     <!--============================
-                    PRODUCT DETAILS END
-                ==============================-->
+            PRODUCT DETAILS END
+        ==============================-->
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -384,14 +383,12 @@
         </div>
     </div>
 @endsection
-
 @push('scripts')
-    {{-- <script>
+    <script>
         $(document).ready(function() {
             $('.message_modal').on('submit', function(e) {
                 e.preventDefault();
                 let formData = $(this).serialize();
-
                 $.ajax({
                     method: 'POST',
                     url: '{{ route('user.send-message') }}',
@@ -406,7 +403,7 @@
                         $('.message-box').val('');
                         $('.modal-body').append(
                             `<div class="alert alert-success mt-2"><a href="{{ route('user.messages.index') }}" class="text-primary">Click here</a> for go to messenger.</div>`
-                            )
+                        )
                         toastr.success(response.message);
                     },
                     error: function(xhr, status, error) {
@@ -421,5 +418,5 @@
                 })
             })
         })
-    </script> --}}
+    </script>
 @endpush

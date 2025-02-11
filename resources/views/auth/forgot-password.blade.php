@@ -1,14 +1,13 @@
 @extends('frontend.layouts.master')
 
-{{-- @section('title')
-{{$settings->site_name}} || Login
-@endsection --}}
+@section('title')
+    {{ $settings->site_name }} || Forgot
+@endsection
 
 @section('content')
-
     <!--============================
-        BREADCRUMB START
-    ==============================-->
+            BREADCRUMB START
+        ==============================-->
     <section id="wsus__breadcrumb">
         <div class="wsus_breadcrumb_overlay">
             <div class="container">
@@ -25,13 +24,13 @@
         </div>
     </section>
     <!--============================
-        BREADCRUMB END
-    ==============================-->
+            BREADCRUMB END
+        ==============================-->
 
 
     <!--============================
-        FORGET PASSWORD START
-    ==============================-->
+            FORGET PASSWORD START
+        ==============================-->
     <section id="wsus__login_register">
         <div class="container">
             <div class="row">
@@ -45,33 +44,31 @@
                                 @csrf
                                 <div class="wsus__login_input">
                                     <i class="fal fa-envelope"></i>
-                                    <input id="email" class="block mt-1 w-full" type="email"
-                                    name="email" value="{{old('email')}}"
-                                    placeholder="Email">
+                                    <input id="email" class="block mt-1 w-full" type="email" name="email"
+                                        value="{{ old('email') }}" placeholder="Email">
                                 </div>
                                 <button class="common_btn" type="submit">Email Password Reset Link</button>
                             </form>
                         </div>
-                        <a class="see_btn mt-4" href="{{route('login')}}">go to login</a>
+                        <a class="see_btn mt-4" href="{{ route('login') }}">go to login</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!--============================
-        FORGET PASSWORD END
-    ==============================-->
+            FORGET PASSWORD END
+        ==============================-->
 
 
 
     <!--============================
-        SCROLL BUTTON START
-    ==============================-->
+            SCROLL BUTTON START
+        ==============================-->
     <div class="wsus__scroll_btn">
         <i class="fas fa-chevron-up"></i>
     </div>
     <!--============================
-        SCROLL BUTTON  END
-    ==============================-->
-
+            SCROLL BUTTON  END
+        ==============================-->
 @endsection()

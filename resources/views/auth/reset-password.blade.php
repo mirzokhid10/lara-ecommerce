@@ -1,10 +1,13 @@
 @extends('frontend.layouts.master')
 
-@section('content')
+@section('title')
+    {{ $settings->site_name }} || Reset Password
+@endsection
 
+@section('content')
     <!--============================
-        BREADCRUMB START
-    ==============================-->
+                BREADCRUMB START
+            ==============================-->
     <section id="wsus__breadcrumb">
         <div class="wsus_breadcrumb_overlay">
             <div class="container">
@@ -21,13 +24,13 @@
         </div>
     </section>
     <!--============================
-        BREADCRUMB END
-    ==============================-->
+                BREADCRUMB END
+            ==============================-->
 
 
     <!--============================
-        CHANGE PASSWORD START
-    ==============================-->
+                CHANGE PASSWORD START
+            ==============================-->
     <section id="wsus__login_register">
         <div class="container">
             <div class="row">
@@ -40,20 +43,18 @@
                             <input type="hidden" name="token" value="{{ $request->route('token') }}">
                             <div class="wsus__single_pass">
                                 <label>Email</label>
-                                <input id="email" type="email" class="block mt-1 w-full"
-                                name="email"  value="{{old('email', $request->email)}}"
-                                required autofocus autocomplete="username">
+                                <input id="email" type="email" class="block mt-1 w-full" name="email"
+                                    value="{{ old('email', $request->email) }}" required autofocus autocomplete="username">
                             </div>
                             <div class="wsus__single_pass">
                                 <label>new password</label>
-                                <input id="password" class="block mt-1 w-full" type="password"
-                                name="password" required autocomplete="new-password">
+                                <input id="password" class="block mt-1 w-full" type="password" name="password" required
+                                    autocomplete="new-password">
                             </div>
                             <div class="wsus__single_pass">
                                 <label>confirm password</label>
-                                <input id="password_confirmation" class="block mt-1 w-full"
-                                type="password" name="password_confirmation" required
-                                autocomplete="new-password" >
+                                <input id="password_confirmation" class="block mt-1 w-full" type="password"
+                                    name="password_confirmation" required autocomplete="new-password">
                             </div>
                             <button class="common_btn" type="submit">Confirm</button>
                         </div>
@@ -63,7 +64,6 @@
         </div>
     </section>
     <!--============================
-        CHANGE PASSWORD END
-    ==============================-->
-
+                CHANGE PASSWORD END
+            ==============================-->
 @endsection

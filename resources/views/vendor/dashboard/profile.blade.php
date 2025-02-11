@@ -1,13 +1,13 @@
 @extends('vendor.layouts.master')
 
-{{-- @section('title')
+@section('title')
     {{ $settings->site_name }} || User Profile
-@endsection --}}
+@endsection
 
 @section('content')
     <!--=============================
-        DASHBOARD START
-      ==============================-->
+            DASHBOARD START
+          ==============================-->
     <section id="wsus__dashboard">
         <div class="container-fluid">
             @include('vendor.layouts.sidebar')
@@ -88,6 +88,6 @@
         </div>
     </section>
     <!--=============================
-        DASHBOARD START
-      ==============================-->
+            DASHBOARD START
+          ==============================-->
 @endsection

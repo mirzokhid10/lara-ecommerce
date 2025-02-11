@@ -1,10 +1,13 @@
 @extends('frontend.layouts.master')
 
-@section('content')
+@section('title')
+    {{ $settings->site_name }}Sazao || e-Commerce
+@endsection
 
-<!--==========================
-      PRODUCT MODAL VIEW START
-    ===========================-->
+@section('content')
+    <!--==========================
+                    PRODUCT MODAL VIEW START
+                    ===========================-->
     <section class="product_popup_modal">
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog">
@@ -22,22 +25,26 @@
                                     <div class="row modal_slider">
                                         <div class="col-xl-12">
                                             <div class="modal_slider_img">
-                                                <img src="{{asset('frontend/images/zoom1.jpg')}}" alt="product" class="img-fluid w-100">
+                                                <img src="{{ asset('frontend/images/zoom1.jpg') }}" alt="product"
+                                                    class="img-fluid w-100">
                                             </div>
                                         </div>
                                         <div class="col-xl-12">
                                             <div class="modal_slider_img">
-                                                <img src="{{asset('frontend/images/zoom2.jpg')}}" alt="product" class="img-fluid w-100">
+                                                <img src="{{ asset('frontend/images/zoom2.jpg') }}" alt="product"
+                                                    class="img-fluid w-100">
                                             </div>
                                         </div>
                                         <div class="col-xl-12">
                                             <div class="modal_slider_img">
-                                                <img src="{{asset('frontend/images/zoom3.jpg')}}" alt="product" class="img-fluid w-100">
+                                                <img src="{{ asset('frontend/images/zoom3.jpg') }}" alt="product"
+                                                    class="img-fluid w-100">
                                             </div>
                                         </div>
                                         <div class="col-xl-12">
                                             <div class="modal_slider_img">
-                                                <img src="{{asset('frontend/images/zoom4.jpg')}}" alt="product" class="img-fluid w-100">
+                                                <img src="{{ asset('frontend/images/zoom4.jpg') }}" alt="product"
+                                                    class="img-fluid w-100">
                                             </div>
                                         </div>
                                     </div>
@@ -84,7 +91,8 @@
                                     <div class="wsus__quentity">
                                         <h5>quentity :</h5>
                                         <form class="select_number">
-                                            <input class="number_area" type="text" min="1" max="100" value="1" />
+                                            <input class="number_area" type="text" min="1" max="100"
+                                                value="1" />
                                         </form>
                                         <h3>$50.00</h3>
                                     </div>
@@ -123,10 +131,13 @@
                                     <div class="wsus__pro_det_share">
                                         <h5>share :</h5>
                                         <ul class="d-flex">
-                                            <li><a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+                                            </li>
                                             <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a class="whatsapp" href="#"><i class="fab fa-whatsapp"></i></a></li>
-                                            <li><a class="instagram" href="#"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a class="whatsapp" href="#"><i class="fab fa-whatsapp"></i></a>
+                                            </li>
+                                            <li><a class="instagram" href="#"><i class="fab fa-instagram"></i></a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -138,119 +149,118 @@
         </div>
     </section>
     <!--==========================
-      PRODUCT MODAL VIEW END
-    ===========================-->
+                                  PRODUCT MODAL VIEW END
+                                  ===========================-->
 
 
     <!--============================
-        BANNER PART 2 START
-    ==============================-->
+                                                                    BANNER PART 2 START
+                                            ==============================-->
     @include('frontend.home.sections.banner-slider')
     <!--============================
-        BANNER PART 2 END
-    ==============================-->
+                                                                    BANNER PART 2 END
+                                            ==============================-->
 
 
     <!--============================
-        FLASH SELL START
-    ==============================-->
+                                                                    FLASH SELL START
+                                            ==============================-->
     @include('frontend.home.sections.flash-sale')
     <!--============================
-        FLASH SELL END
-    ==============================-->
+                                                                    FLASH SELL END
+                                            ==============================-->
 
 
     <!--============================
-       MONTHLY TOP PRODUCT START
-    ==============================-->
+                                                                       MONTHLY TOP PRODUCT START
+                                                ==============================-->
     @include('frontend.home.sections.top-category-product')
     <!--============================
-       MONTHLY TOP PRODUCT END
-    ==============================-->
+                                                                       MONTHLY TOP PRODUCT END
+                                                ==============================-->
 
 
     <!--============================
-        BRAND SLIDER START
-    ==============================-->
+                                                                        BRAND SLIDER START
+                                                ==============================-->
     @include('frontend.home.sections.brand-slider')
     <!--============================
-        BRAND SLIDER END
-    ==============================-->
+                                                                        BRAND SLIDER END
+                                                ==============================-->
 
 
     <!--============================
-        SINGLE BANNER START
-    ==============================-->
+                                                                        SINGLE BANNER START
+                                                ==============================-->
     @include('frontend.home.sections.single-banner')
     <!--============================
-        SINGLE BANNER END
-    ==============================-->
+                                                                        SINGLE BANNER END
+                                                ==============================-->
 
 
     <!--============================
-        HOT DEALS START
-    ==============================-->
+                                                                        HOT DEALS START
+                                                ==============================-->
     @include('frontend.home.sections.hot-deals')
 
     <!--============================
-        HOT DEALS END
-    ==============================-->
+                                                                        HOT DEALS END
+                                                ==============================-->
 
 
     <!--============================
-        ELECTRONIC PART START
-    ==============================-->
+                                                                        ELECTRONIC PART START
+                                                ==============================-->
     @include('frontend.home.sections.category-product-slider-one')
     <!--============================
-        ELECTRONIC PART END
-    ==============================-->
+                                                                        ELECTRONIC PART END
+                                                ==============================-->
 
 
     <!--============================
-        ELECTRONIC PART START
-    ==============================-->
+                                                                        ELECTRONIC PART START
+                                                ==============================-->
     @include('frontend.home.sections.category-product-slider-two')
 
     <!--============================
-        ELECTRONIC PART END
-    ==============================-->
+                                                                        ELECTRONIC PART END
+                                                ==============================-->
 
 
     <!--============================
-        LARGE BANNER  START
-    ==============================-->
+                                                                        LARGE BANNER  START
+                                                ==============================-->
     @include('frontend.home.sections.large-banner')
     <!--============================
-        LARGE BANNER  END
-    ==============================-->
+                                                                        LARGE BANNER  END
+                                                ==============================-->
 
 
     <!--============================
-        WEEKLY BEST ITEM START
-    ==============================-->
+                                                                        WEEKLY BEST ITEM START
+                                                ==============================-->
     @include('frontend.home.sections.weekly-best-item')
 
     <!--============================
-        WEEKLY BEST ITEM END
-    ==============================-->
+                                                                        WEEKLY BEST ITEM END
+                                                ==============================-->
 
 
     <!--============================
-      HOME SERVICES START
-    ==============================-->
+                                                                      HOME SERVICES START
+                                                ==============================-->
     @include('frontend.home.sections.home-service')
     <!--============================
-        HOME SERVICES END
-    ==============================-->
+                                                                        HOME SERVICES END
+                                                ==============================-->
 
 
     <!--============================
-        HOME BLOGS START
-    ==============================-->
+                                                                        HOME BLOGS START
+                                                ==============================-->
     @include('frontend.home.sections.blog')
 
     <!--============================
-        HOME BLOGS END
-    ==============================-->
-
+                                                HOME BLOGS END
+                                                ==============================-->
 @endsection

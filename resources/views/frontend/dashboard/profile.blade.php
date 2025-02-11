@@ -1,9 +1,13 @@
 @extends('frontend.dashboard.layouts.master')
 
+@section('title')
+    {{ $settings->site_name }} || Profile
+@endsection
+
 @section('content')
     <!--=============================
-        DASHBOARD START
-      ==============================-->
+                DASHBOARD START
+              ==============================-->
     <section id="wsus__dashboard">
         <div class="container-fluid">
             @include('frontend.dashboard.layouts.sidebar')
@@ -21,22 +25,23 @@
                                     <div class="col-md-12">
                                         <div class="col-md-2">
                                             <div class="wsus__dash_pro_img">
-                                                <img src="{{Auth::user()->image ? asset(Auth::user()->image) :
-                                                asset('frontend/images/ts-2.jpg')}}"
-                                                alt="img" class="img-fluid w-100">
+                                                <img src="{{ Auth::user()->image ? asset(Auth::user()->image) : asset('frontend/images/ts-2.jpg') }}"
+                                                    alt="img" class="img-fluid w-100">
                                                 <input type="file" name="image">
                                             </div>
                                         </div>
                                         <div class="col-md-12 mt-5">
                                             <div class="wsus__dash_pro_single">
                                                 <i class="fas fa-user-tie"></i>
-                                                <input type="text" placeholder="Name" name="name" value="{{Auth::user()->name}}">
+                                                <input type="text" placeholder="Name" name="name"
+                                                    value="{{ Auth::user()->name }}">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="wsus__dash_pro_single">
                                                 <i class="fal fa-envelope-open"></i>
-                                                <input type="email" placeholder="Email" name="email" value="{{Auth::user()->email}}">
+                                                <input type="email" placeholder="Email" name="email"
+                                                    value="{{ Auth::user()->email }}">
                                             </div>
                                         </div>
                                     </div>
@@ -45,7 +50,7 @@
                                     </div>
                                 </form>
                                 <div class="wsus__dash_pass_change mt-2">
-                                    <form action="{{route('user.profile.update.password')}}" method="POST">
+                                    <form action="{{ route('user.profile.update.password') }}" method="POST">
                                         @csrf
                                         <div class="row">
                                             <h4>Update Password</h4>
@@ -83,6 +88,6 @@
         </div>
     </section>
     <!--=============================
-        DASHBOARD START
-      ==============================-->
+                DASHBOARD START
+              ==============================-->
 @endsection
