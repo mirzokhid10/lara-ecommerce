@@ -49,7 +49,6 @@
                                         <h4 style="color:#ffff"></h4>
                                     </a>
                                 </div>
-
                                 <div class="col-xl-2 col-6 col-md-4">
                                     {{-- {{route('user.wishlist.index')}} --}}
                                     <a class="wsus__dashboard_item purple" href="">
@@ -59,7 +58,6 @@
                                         <h4 style="color:#ffff"></h4>
                                     </a>
                                 </div>
-
                                 <div class="col-xl-2 col-6 col-md-4">
                                     {{-- {{route('user.profile')}} --}}
                                     <a class="wsus__dashboard_item orange" href="">
